@@ -8,6 +8,15 @@ g = document.getElementById("7");
 h = document.getElementById("8");
 i = document.getElementById("9");
 // the document.getElementById's actually put them into html and also to make to put it into the function checkImage to make them a,b,c,d,e,f,g,h,i and the functions rotateImage is setting up by using the onclick to do the classlist.toggle and also to add class and also in the if else if *//
+var img = document.getElementById('blinking_image');
+
+var interval = window.setInterval(function(){
+    if(img.display == 'hidden'){
+        img.style.visibility = 'visible';
+    }else{
+        img.style.visibility = 'hidden';
+    }
+}, 1000);
 
 function rotateImage(el){
 	el.classList.toggle("rotate");
