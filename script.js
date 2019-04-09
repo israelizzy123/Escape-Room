@@ -49,3 +49,20 @@ function checkImage(el){
 	}
 
 }
+function on(){
+	if (document.getElementById)
+		//the value for visibility of the logo image with will visible
+	document.getElementById("blink1").style.visibility = "visible";
+}
+//this function is to hide the logo with the value hidden
+function off(){
+	if (document.getElementById)
+	document.getElementById("blink1").style.visibility = "hidden";
+}
+
+// toggle "on" and "off"every 500 ms to show the nhl logo blinking
+// end after 5500 ms which is about 5 seconds
+for(var i=900; i < 5500; i=i+900){
+	setTimeout("off()",i);
+	setTimeout("on()",i+500);
+}
